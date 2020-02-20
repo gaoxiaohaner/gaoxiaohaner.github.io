@@ -557,43 +557,23 @@ div#posts.posts-expand {
 
 function loadXMLDoc(xmlUrl) 
 {
-    try //Internet Explorer
-    {
-        xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
-    }
-    catch(e)
-    {
-      try //Firefox, Mozilla, Opera, etc.
-        {
-          xmlDoc=document.implementation.createDocument("","",null);
-        }
-      catch(e) {alert(e.message)}
-    }
-
-    try 
-    {
-          xmlDoc.async=false;
-          xmlDoc.load(xmlUrl);
-    }
-    catch(e) {
-        try //Google Chrome  
-          {  
-            var chromeXml = new XMLHttpRequest();
-            chromeXml.open("GET", xmlUrl, false);
-            chromeXml.send(null);
-            xmlDoc = chromeXml.responseXML.documentElement;                 
-            //alert(xmlDoc.childNodes[0].nodeName);
-            //return xmlDoc;    
-          }  
-          catch(e)  
-          {  
-              alert(e.message)  
-          }                
-    }
+    if (window.ActiveXObject) {  
+        xmlDoc = new ActiveXObject("Microsoft.XMLDOM");  
+        //xmlDom.loadXML(xmlFile);//如果用的是XML字符串  
+        xmlDoc.load(xmlUrl); //如果用的是xml文件。  
+    } else if (document.implementation && document.implementation.createDocument) {  
+        var xmlhttp = new window.XMLHttpRequest();  
+        xmlhttp.open("GET", xmlUrl, false);  
+        xmlhttp.send(null);  
+        xmlDoc = xmlhttp.responseXML.documentElement;//一定要有根节点(否则google浏览器读取不了)  
+    } else {  
+        xmlDoc = null;  
+    }  
     return xmlDoc; 
+
 }
 
-var xmllink="你的访问域名链接"
+var xmllink="https://ablum-1259480632.cos.ap-beijing.myqcloud.com"
 //访问域名链接就是我上面提到的那个访问域名xml链接
 
 xmlDoc=loadXMLDoc(xmllink);
