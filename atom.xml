@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gh0614.com/"/>
-  <updated>2020-02-20T11:45:00.972Z</updated>
+  <updated>2020-02-20T12:59:10.016Z</updated>
   <id>http://gh0614.com/</id>
   
   <author>
@@ -17,25 +17,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://gh0614.com/2020/02/17/hello-world/"/>
-    <id>http://gh0614.com/2020/02/17/hello-world/</id>
-    <published>2020-02-17T14:15:38.842Z</published>
-    <updated>2020-02-20T11:45:00.972Z</updated>
+    <title>weapp</title>
+    <link href="http://gh0614.com/2020/02/20/weapp/"/>
+    <id>http://gh0614.com/2020/02/20/weapp/</id>
+    <published>2020-02-20T12:38:59.000Z</published>
+    <updated>2020-02-20T12:59:10.016Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>哈哈哈双方的拉开圣诞节分厘卡时间费德勒撒旦解放撒嗲放哪拒绝</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
+      俺是摘要
     
     </summary>
     
-      <category term="favorite" scheme="http://gh0614.com/categories/favorite/"/>
+      <category term="公众号" scheme="http://gh0614.com/categories/%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
+    
+      <category term="酸甜柠檬" scheme="http://gh0614.com/tags/%E9%85%B8%E7%94%9C%E6%9F%A0%E6%AA%AC/"/>
+    
+      <category term="闲谈" scheme="http://gh0614.com/tags/%E9%97%B2%E8%B0%88/"/>
     
   </entry>
   
