@@ -365,11 +365,14 @@
   <div id="content" class="site-content">
     <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
       
+<!DOCTYPE html>
+<html>
   <head><meta name="generator" content="Hexo 3.9.0">
     <title>G&F的相册</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaoxiaohaner/gaoxiaohaner.github.io@3.1/stylesheets/style.css?t=1580910907357">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaoxiaohaner/gaoxiaohaner.github.io@3.1/stylesheets/photos.css?t=1580910907357">
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdn.jsdelivr.net/gh/gaoxiaohaner/gaoxiaohaner.github.io@3.1/stylesheets/style.css?t=1580910907357">
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdn.jsdelivr.net/gh/gaoxiaohaner/gaoxiaohaner.github.io@3.1/stylesheets/photos.css?t=1580910907357">
   </head>
   <body>
     <div class="box" id="box"></div>
@@ -427,9 +430,7 @@ for (var i = 0; i < content.length; i++) {
 	for (var j = 1; j < content[i].length && j < showNum+1; j++) {
 		var con=content[i][j].url;
 		var item=document.createElement("li");
-		item.innerHTML="<div class=imgbox id=imgbox style=height:"+wid+"px;>
-		<img class=imgitem src="+xmllink+'/'+title+con+" alt="+con+">
-		</div><span>"+con.substring(0,con.length-4)+"</span><p>上传于"+content[i][j].date+"</p>";
+		item.innerHTML="<div class=imgbox id=imgbox style=height:"+wid+"px;><img class=imgitem src="+xmllink+'/'+title+con+" alt="+con+"></div><span>"+con.substring(0,con.length-4)+"</span><p>上传于"+content[i][j].date+"</p>";
 		conBox.appendChild(item);
 	}
 	if(content[i].length > showNum){
@@ -463,10 +464,11 @@ function moreClick(obj,cur,cont,title){
 	}
 }
 	</script>
-    <script src="https://cdn.jsdelivr.net/gh/gaoxiaohaner/gaoxiaohaner.github.io@3.1/javascripts/jQuery.min.js?t=1580910907357"></script>
-    <script src="https://cdn.jsdelivr.net/gh/gaoxiaohaner/gaoxiaohaner.github.io@3.1/javascripts/image.js?t=1580910907357"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gaoxiaohaner/gaoxiaohaner.github.io@3.1/javascripts/jQuery.min.js?t=1580910907357" charset="UTF-8"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gaoxiaohaner/gaoxiaohaner.github.io@3.1/javascripts/image.js?t=1580910907357" charset="UTF-8"></script>
+  </body>
+</html>
 
-</body>
       <!-- .entry-content -->
       
 <div id="vcomments"></div>
@@ -525,7 +527,7 @@ function moreClick(obj,cur,cont,title){
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -537,10 +539,10 @@ function moreClick(obj,cur,cont,title){
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
-            // PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
