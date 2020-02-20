@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">我们❤️狗窝</title>
+  <title itemprop="name">album | 我们❤️狗窝</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -365,17 +365,14 @@
   <div id="content" class="site-content">
     <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
       
-<!DOCTYPE html>
-<html>
   <head><meta name="generator" content="Hexo 3.9.0">
     <title>G&F的相册</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css?t=1580910907357">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/photos.css?t=1580910907357">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaoxiaohaner/gaoxiaohaner.github.io@3.1/stylesheets/style.css?t=1580910907357">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaoxiaohaner/gaoxiaohaner.github.io@3.1/stylesheets/photos.css?t=1580910907357">
   </head>
   <body>
     <div class="box" id="box"></div>
-    <img src="https://image.idealli.com/bg12.jpg" alt style="width: 100%;height: auto;">
     <script>
 function loadXMLDoc(xmlUrl) 
 {
@@ -430,7 +427,9 @@ for (var i = 0; i < content.length; i++) {
 	for (var j = 1; j < content[i].length && j < showNum+1; j++) {
 		var con=content[i][j].url;
 		var item=document.createElement("li");
-		item.innerHTML="<div class=imgbox id=imgbox style=height:"+wid+"px;><img class=imgitem src="+xmllink+'/'+title+con+" alt="+con+"></div><span>"+con.substring(0,con.length-4)+"</span><p>上传于"+content[i][j].date+"</p>";
+		item.innerHTML="<div class=imgbox id=imgbox style=height:"+wid+"px;>
+		<img class=imgitem src="+xmllink+'/'+title+con+" alt="+con+">
+		</div><span>"+con.substring(0,con.length-4)+"</span><p>上传于"+content[i][j].date+"</p>";
 		conBox.appendChild(item);
 	}
 	if(content[i].length > showNum){
@@ -442,7 +441,7 @@ for (var i = 0; i < content.length; i++) {
 		moreItem.onclick= function (){
 			moreClick(this,cur,content[cur],content[cur][0].url);
 		}
-		moreItem.innerHTML="<span style=display:inline;><strong style=color:#f0f3f6;>加载更多</strong></span>";
+		moreItem.innerHTML="<span style=display:inline;><strong style=color:#f0f3f6;>多瞅瞅些照片</strong></span>";
 		conBox.appendChild(moreItem);
 	}
 }
@@ -464,11 +463,10 @@ function moreClick(obj,cur,cont,title){
 	}
 }
 	</script>
-    <script src="/javascripts/jQuery.min.js?t=1580910907357"></script>
-    <script src="/javascripts/image.js?t=1580910907357"></script>
-  </body>
-</html>
+    <script src="https://cdn.jsdelivr.net/gh/gaoxiaohaner/gaoxiaohaner.github.io@3.1/javascripts/jQuery.min.js?t=1580910907357"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gaoxiaohaner/gaoxiaohaner.github.io@3.1/javascripts/image.js?t=1580910907357"></script>
 
+</body>
       <!-- .entry-content -->
       
 <div id="vcomments"></div>
