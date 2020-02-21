@@ -417,7 +417,7 @@
         <div class="entry-content">
           <h2 id="高涵真帅"><a href="#高涵真帅" class="headerlink" title="高涵真帅"></a>高涵真帅</h2><p>afdsdfasf </p>
 <h3 id="高涵真帅-1"><a href="#高涵真帅-1" class="headerlink" title="高涵真帅"></a>高涵真帅</h3><h1 id="狗子真好看"><a href="#狗子真好看" class="headerlink" title="狗子真好看"></a>狗子真好看</h1><p><img src="https://dog-1259480632.cos.ap-beijing.myqcloud.com/images/32.jpg" height="330" width="495"></p>
-<div height="330" width="495"><br><a href="https://dog-1259480632.cos.ap-beijing.myqcloud.com/images/32.jpg" data-fancybox="images" data-caption="狗子真好看" target="_blank" rel="noopener"><img src="https://dog-1259480632.cos.ap-beijing.myqcloud.com/images/32.jpg"></a><br></div>
+<p height="330" width="495"><br><img height="330" width="495"><br><a href="https://dog-1259480632.cos.ap-beijing.myqcloud.com/images/32.jpg" data-fancybox="images" data-caption="狗子真好看" target="_blank" rel="noopener"><img src="https://dog-1259480632.cos.ap-beijing.myqcloud.com/images/32.jpg"></a><br><br></p>
 
 <p><a href="http://gh0614.com">博客预览</a></p>
 <h1 id="狗子真好看1啊啊"><a href="#狗子真好看1啊啊" class="headerlink" title="狗子真好看1啊啊"></a>狗子真好看1啊啊</h1>
@@ -506,7 +506,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -518,10 +518,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: '文章',
-            // PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -936,9 +936,10 @@
 </div>
 
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 <style>
     .aplayer .aplayer-lrc {
         height: 35px;
@@ -963,8 +964,11 @@
     }
 </style>
 <meting-js 
+    enable="
+        true"
+            
     id="
-        2660651585"
+        455354804"
             
     server="
         netease"
@@ -975,27 +979,16 @@
     fixed="
         true"
             
-    autoplay="
-        true"
-            
-    loop="
-        all"
-            
     order="
         random"
             
     preload="
-        auto"
+        none"
             
-    volume="
-        0.7"
-            
-    mutex="
+    autoplay="
         true"
             
-    meting="
-        true"
-            
+                >
 </meting-js>
 
 

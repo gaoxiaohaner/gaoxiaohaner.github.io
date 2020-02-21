@@ -501,17 +501,17 @@ $(document).ready(function() {
             setCookie('bgImgSetting', url, 30)
         })
     }
-    changeBG('#sakura-bg', 'http://pic1.win4000.com/wallpaper/f/57f88e30c9269.jpg')
-    changeBG('#gribs-bg', 'http://pic1.win4000.com/wallpaper/2020-02-21/5e4f3b55446c3.jpg')
-    changeBG('#pixiv-bg', 'http://pic1.win4000.com/wallpaper/2020-02-20/5e4e55772b37f.jpg')
-    changeBG('#KAdots-bg', 'http://pic1.win4000.com/wallpaper/2020-02-20/5e4e557cebcfa.jpg')
-    changeBG('#totem-bg', 'http://pic1.win4000.com/wallpaper/2020-02-20/5e4defe7f1117.jpg')
-    changeBGnoTrans('#bing-bg', 'https://api.shino.cc/bing/')
+    changeBG('#sakura-bg', 'https://dog-1259480632.cos.ap-beijing.myqcloud.com/bg/love2.jpg')
+    changeBG('#gribs-bg', 'https://dog-1259480632.cos.ap-beijing.myqcloud.com/bg/love3.jpg')
+    changeBG('#pixiv-bg', 'https://dog-1259480632.cos.ap-beijing.myqcloud.com/bg/love4.jpg')
+    changeBG('#KAdots-bg', 'https://dog-1259480632.cos.ap-beijing.myqcloud.com/bg/love5.jpg')
+    changeBG('#totem-bg', 'https://dog-1259480632.cos.ap-beijing.myqcloud.com/bg/love6.jpg')
+    changeBGnoTrans('#bing-bg', 'https://dog-1259480632.cos.ap-beijing.myqcloud.com/bg/love7.jpg')
     $('.skin-menu #white-bg').click(function() {
         mashiro_global.variables.skinSecter = false
         mashiro_global.variables.isNight = false
         $('#night-mode-cover').css('visibility', 'hidden')
-        $('body').css('background-image', 'none')
+        $('body').css('background-image', 'url(https://dog-1259480632.cos.ap-beijing.myqcloud.com/bg/love8.jpg)')
         $('.blank').css('background-color', 'rgba(255,255,255,.0)')
         $('.pattern-center-sakura').removeClass('pattern-center-sakura').addClass('pattern-center')
         $('.headertop-bar-sakura').removeClass('headertop-bar-sakura').addClass('headertop-bar')
@@ -523,7 +523,7 @@ $(document).ready(function() {
     $('.skin-menu #dark-bg').click(function() {
         mashiro_global.variables.skinSecter = true
         mashiro_global.variables.isNight = true
-        $('body').css('background-image', 'url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/starry_sky.png)')
+        $('body').css('background-image', 'url(https://dog-1259480632.cos.ap-beijing.myqcloud.com/bg/love9.jpg)')
         $('.blank').css('background-color', 'rgba(255,255,255,.8)')
         $('#night-mode-cover').css('visibility', 'visible')
         $('.pattern-center').removeClass('pattern-center').addClass('pattern-center-sakura')
@@ -569,6 +569,7 @@ function preBG() {
     console.log(bg[Math.abs(bgindex % bg.length)])
     $('.centerbg').css('background-image', 'url("' + bg[Math.abs(bgindex % bg.length)] + '")')
 }
+//主页面随机的展示的背景图片
 $(document).ready(function() {
     var bgindex = Math.floor(Math.random() * bg.length)
     $('.centerbg').css('background-image', 'url("' + bg[bgindex] + '")')
@@ -1642,9 +1643,6 @@ $(function() {
     $(document).on('click', '.specsZan', function() {
         $(this).postLike()
     })
-    console.log('%c Mashiro %c', 'background:#24272A; color:#ffffff', '', 'https://2heng.xin/')
-    console.log('%c hojun %c', 'background:#24272A; color:#ffffff', '', 'https://www.hojun.cn/')
-    console.log('%c Github %c', 'background:#24272A; color:#ffffff', '', 'https://github.com/honjun/hexo-theme-sakura')
 })
 var isWebkit = navigator.userAgent.toLowerCase().indexOf('webkit') > -1,
     isOpera = navigator.userAgent.toLowerCase().indexOf('opera') > -1,
@@ -1692,112 +1690,120 @@ String.prototype.render = function(context) {
     return render(this, context)
 }
 
+//初始话的时候，背景是怎么样的
 $(document).ready(function() {
-    setTimeout(function() {
-        isFirstLoad = true
-        if (document.body.clientWidth > 860) {
-            $('.changeSkin-gear').css('visibility', 'visible')
-        }
-        $('p').remove('.head-copyright')
-    }, 0)
-})
-
-// function aplayerF() {
-//     'use strict';
-//     var aplayers = [],
-//         loadMeting = function () {
-//             function a(a, b) {
-//                 var c = {
-//                     container: a,
-//                     audio: b,
-//                     mini: null,
-//                     fixed: null,
-//                     autoplay: !1,
-//                     mutex: !0,
-//                     lrcType: 3,
-//                     listFolded: !1,
-//                     preload: 'auto',
-//                     theme: '#2980b9',
-//                     loop: 'all',
-//                     order: 'list',
-//                     volume: null,
-//                     listMaxHeight: null,
-//                     customAudioType: null,
-//                     storageName: 'metingjs'
-//                 };
-//                 if (b.length) {
-//                     b[0].lrc || (c.lrcType = 0);
-//                     var d = {};
-//                     for (var e in c) {
-//                         var f = e.toLowerCase();
-//                         (a.dataset.hasOwnProperty(f) || a.dataset.hasOwnProperty(e) || null !== c[e]) && (d[e] = a.dataset[f] || a.dataset[e] || c[e], ('true' === d[e] || 'false' === d[e]) && (d[e] = 'true' == d[e]))
-//                     }
-//                     aplayers.push(new APlayer(d))
-//                 }
-//                 for (var f = 0; f < aplayers.length; f++) try {
-//                     aplayers[f].lrc.hide();
-//                 } catch (a) {
-//                     console.log(a)
-//                 }
-//                 var lrcTag = 1;
-//                 $(".aplayer.aplayer-fixed").click(function () {
-//                     if (lrcTag == 1) {
-//                         for (var f = 0; f < aplayers.length; f++) try {
-//                             aplayers[f].lrc.show();
-//                         } catch (a) {
-//                             console.log(a)
-//                         }
-//                     }
-//                     lrcTag = 2;
-//                 });
-//                 var apSwitchTag = 0;
-//                 $(".aplayer.aplayer-fixed .aplayer-body").addClass("ap-hover");
-//                 $(".aplayer-miniswitcher").click(function () {
-//                     if (apSwitchTag == 0) {
-//                         $(".aplayer.aplayer-fixed .aplayer-body").removeClass("ap-hover");
-//                         apSwitchTag = 1;
-//                     } else {
-//                         $(".aplayer.aplayer-fixed .aplayer-body").addClass("ap-hover");
-//                         apSwitchTag = 0;
-//                     }
-//                 });
-//             }
-//             var b = 'https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r';
-//             'undefined' != typeof meting_api && (b = meting_api);
-//             for (var f = 0; f < aplayers.length; f++) try {
-//                 aplayers[f].destroy()
-//             } catch (a) {
-//                 console.log(a)
-//             }
-//             aplayers = [];
-//             for (var c = document.querySelectorAll('.aplayer'), d = function () {
-//                 var d = c[e],
-//                     f = d.dataset.id;
-//                 if (f) {
-//                     var g = d.dataset.api || b;
-//                     g = g.replace(':server', d.dataset.server), g = g.replace(':type', d.dataset.type), g = g.replace(':id', d.dataset.id), g = g.replace(':auth', d.dataset.auth), g = g.replace(':r', Math.random());
-//                     var h = new XMLHttpRequest;
-//                     h.onreadystatechange = function () {
-//                         if (4 === h.readyState && (200 <= h.status && 300 > h.status || 304 === h.status)) {
-//                             var b = JSON.parse(h.responseText);
-//                             a(d, b)
-//                         }
-//                     }, h.open('get', g, !0), h.send(null)
-//                 } else if (d.dataset.url) {
-//                     var i = [{
-//                         name: d.dataset.name || d.dataset.title || 'Audio name',
-//                         artist: d.dataset.artist || d.dataset.author || 'Audio artist',
-//                         url: d.dataset.url,
-//                         cover: d.dataset.cover || d.dataset.pic,
-//                         lrc: d.dataset.lrc,
-//                         type: d.dataset.type || 'auto'
-//                     }];
-//                     a(d, i)
-//                 }
-//             }, e = 0; e < c.length; e++) d()
-//         };
-//     document.addEventListener('DOMContentLoaded', loadMeting, !1);
-// }
-// if (document.body.clientWidth > 860) {
-//     aplayerF();
-// }
+        setTimeout(function() {
+            isFirstLoad = true
+            if (document.body.clientWidth > 860) {
+                $('body').css('background-image', 'url(https://dog-1259480632.cos.ap-beijing.myqcloud.com/bg/love1.jpg)')
+                    //这个是切换主题的哪个按钮
+                $('.changeSkin-gear').css('visibility', 'visible')
+            }
+            $('p').remove('.head-copyright')
+        }, 0)
+    })
+    /*
+    $('body').css('background-image', 'url(https://dog-1259480632.cos.ap-beijing.myqcloud.com/images/32.jpg)')
+    $('.blank').css('background-color', 'rgba(255,255,255,.0)')
+    */
+    /*
+function aplayerF() {
+    'use strict';
+    var aplayers = [],
+        loadMeting = function() {
+            function a(a, b) {
+                var c = {
+                    container: a,
+                    audio: b,
+                    mini: null,
+                    fixed: null,
+                    autoplay: !1,
+                    mutex: !0,
+                    lrcType: 3,
+                    listFolded: !1,
+                    preload: 'auto',
+                    theme: '#2980b9',
+                    loop: 'all',
+                    order: 'list',
+                    volume: null,
+                    listMaxHeight: null,
+                    customAudioType: null,
+                    storageName: 'metingjs'
+                };
+                if (b.length) {
+                    b[0].lrc || (c.lrcType = 0);
+                    var d = {};
+                    for (var e in c) {
+                        var f = e.toLowerCase();
+                        (a.dataset.hasOwnProperty(f) || a.dataset.hasOwnProperty(e) || null !== c[e]) && (d[e] = a.dataset[f] || a.dataset[e] || c[e], ('true' === d[e] || 'false' === d[e]) && (d[e] = 'true' == d[e]))
+                    }
+                    aplayers.push(new APlayer(d))
+                }
+                for (var f = 0; f < aplayers.length; f++) try {
+                    aplayers[f].lrc.hide();
+                } catch (a) {
+                    console.log(a)
+                }
+                var lrcTag = 1;
+                $(".aplayer.aplayer-fixed").click(function() {
+                    if (lrcTag == 1) {
+                        for (var f = 0; f < aplayers.length; f++) try {
+                            aplayers[f].lrc.show();
+                        } catch (a) {
+                            console.log(a)
+                        }
+                    }
+                    lrcTag = 2;
+                });
+                var apSwitchTag = 0;
+                $(".aplayer.aplayer-fixed .aplayer-body").addClass("ap-hover");
+                $(".aplayer-miniswitcher").click(function() {
+                    if (apSwitchTag == 0) {
+                        $(".aplayer.aplayer-fixed .aplayer-body").removeClass("ap-hover");
+                        apSwitchTag = 1;
+                    } else {
+                        $(".aplayer.aplayer-fixed .aplayer-body").addClass("ap-hover");
+                        apSwitchTag = 0;
+                    }
+                });
+            }
+            var b = 'https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r';
+            'undefined' != typeof meting_api && (b = meting_api);
+            for (var f = 0; f < aplayers.length; f++) try {
+                aplayers[f].destroy()
+            } catch (a) {
+                console.log(a)
+            }
+            aplayers = [];
+            for (var c = document.querySelectorAll('.aplayer'), d = function() {
+                    var d = c[e],
+                        f = d.dataset.id;
+                    if (f) {
+                        var g = d.dataset.api || b;
+                        g = g.replace(':server', d.dataset.server), g = g.replace(':type', d.dataset.type), g = g.replace(':id', d.dataset.id), g = g.replace(':auth', d.dataset.auth), g = g.replace(':r', Math.random());
+                        var h = new XMLHttpRequest;
+                        h.onreadystatechange = function() {
+                            if (4 === h.readyState && (200 <= h.status && 300 > h.status || 304 === h.status)) {
+                                var b = JSON.parse(h.responseText);
+                                a(d, b)
+                            }
+                        }, h.open('get', g, !0), h.send(null)
+                    } else if (d.dataset.url) {
+                        var i = [{
+                            name: d.dataset.name || d.dataset.title || 'Audio name',
+                            artist: d.dataset.artist || d.dataset.author || 'Audio artist',
+                            url: d.dataset.url,
+                            cover: d.dataset.cover || d.dataset.pic,
+                            lrc: d.dataset.lrc,
+                            type: d.dataset.type || 'auto'
+                        }];
+                        a(d, i)
+                    }
+                }, e = 0; e < c.length; e++) d()
+        };
+    document.addEventListener('DOMContentLoaded', loadMeting, !1);
+}
+if (document.body.clientWidth > 860) {
+    aplayerF();
+}
+*/

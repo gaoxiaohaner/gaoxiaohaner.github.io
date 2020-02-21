@@ -546,7 +546,7 @@ function moreClick(obj,cur,cont,title){
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -558,10 +558,10 @@ function moreClick(obj,cur,cont,title){
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: '文章',
-            // PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -976,9 +976,10 @@ function moreClick(obj,cur,cont,title){
 </div>
 
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 <style>
     .aplayer .aplayer-lrc {
         height: 35px;
@@ -1003,8 +1004,11 @@ function moreClick(obj,cur,cont,title){
     }
 </style>
 <meting-js 
+    enable="
+        true"
+            
     id="
-        2660651585"
+        455354804"
             
     server="
         netease"
@@ -1015,27 +1019,16 @@ function moreClick(obj,cur,cont,title){
     fixed="
         true"
             
-    autoplay="
-        true"
-            
-    loop="
-        all"
-            
     order="
         random"
             
     preload="
-        auto"
+        none"
             
-    volume="
-        0.7"
-            
-    mutex="
+    autoplay="
         true"
             
-    meting="
-        true"
-            
+                >
 </meting-js>
 
 
