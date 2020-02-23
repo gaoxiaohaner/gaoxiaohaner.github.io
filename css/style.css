@@ -1705,16 +1705,16 @@ a:active {
 }
 
 .single-center .single-header h1.entry-title {
-    margin: 0;
+    text-align: center;
     font-size: 32px;
     width: 100%
 }
 
 .single-center .entry-census {
     color: #fff;
-    font-size: 14px;
-    padding: 18px 0 0;
-    line-height: 39px
+    font-size: 21px;
+    padding: 18px 190px 10px;
+    line-height: 69px
 }
 
 .single-center .entry-census .bull {
@@ -1722,8 +1722,8 @@ a:active {
 }
 
 .single-center .entry-census span img {
-    width: 35px;
-    height: 35px;
+    width: 70px;
+    height: 70px;
     border-radius: 100%;
     float: left;
     margin-right: 12px
